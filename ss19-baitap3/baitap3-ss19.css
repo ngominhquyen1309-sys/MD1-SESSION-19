@@ -77,6 +77,22 @@ input {
     cursor: pointer;
 }
 
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.extra-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
 .error {
     color: red;
     font-size: 12px;
