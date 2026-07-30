@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(209, 209, 209);
+}
+
+.form-container {
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 50px;
+    margin-bottom: 10px;
+}
+
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+}
+
+input {
+    width: 300px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#btnLogin {
+    width: 100%;
+    background-color: rgb(40, 143, 228);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.password-container {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top:50%;
+    color: black;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.remember-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 8px;                
+    margin: 15px 0;
+    width: 100%;
+}
+
+.remember-box input[type="checkbox"] {
+    width: auto;                 
+    margin-top: 0;            
+    cursor: pointer;
+}
+.remember-box label {
+    display: inline;             
+    margin-top: 0;               
+    font-size: 14px;            
+    cursor: pointer;
+}
+
+/* #rememberMe {
+    position: absolute;
+    right: 100px;
+    
+} */
+
+#btnLogin:hover {
+    background-color: rgb(128, 230, 114);
+}
+
+#togglePassword:hover {
+    cursor: pointer;
+}
+
+
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.extra-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
