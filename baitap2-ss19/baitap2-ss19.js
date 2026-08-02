@@ -1,4 +1,4 @@
-const courses = [
+const defaultCourses = [
   {
     id: 1,
     content: 'Learn Javascript Session 01',
@@ -21,6 +21,15 @@ const courses = [
     assignedTo: 'Hiếu Ci ớt ớt',
   },
 ];
+
+let courses = JSON.parse(localStorage.getItem("courses"));
+
+function saveToLocal() {
+  if (localStorage.getItem("courses") === null) {
+    localStorage.setItem("courses", JSON.stringify(defaultCourses));
+  }
+}
+
 
 let tbodyEl = document.querySelector("#tbody");
 
@@ -83,6 +92,8 @@ function addCourse() {
   document.querySelector(".asignedTo").value = "";
   editId = null;
   btnSubmit.innerText = "Submit";
+
+  saveToLocal();
   showData();
 }
 
@@ -108,6 +119,9 @@ function editCourse(id) {
       btnSubmit.innerText = "Update";
     }
   }
+
+  saveToLocal();
+  showData();
 }
 
 function delCourse(id) {
@@ -119,6 +133,7 @@ function delCourse(id) {
       break;
     }
   }
+  saveToLocal();
   showData();
 }
 
